@@ -58,9 +58,9 @@ export const portfolioData = {
     visionText: "CONTRIBUER À LA TRANSFORMATION DURABLE DES ORGANISATIONS ET AU DÉVELOPPEMENT STRATÉGIQUE DE L'AFRIQUE ET L'EUROPE, EN PLAÇANT LE LEADERSHIP, LA STRATÉGIE ET L'INNOVATION AU CŒUR DE CHAQUE PROJET."
   },
   contact: {
-    email: "marius@innovaskolar.fr",
+    email: "marius.eliteschool@outlook.com",
     phone: "+17(480)315",
-    website: "INOVAkarim.com/mabassadotse.com",
+    website: "https://eliteschool.pro",
     location: "Afrique - Europe"
   }
 };

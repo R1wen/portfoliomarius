@@ -1,25 +1,57 @@
 import React from 'react';
+import { CheckCircle2 } from 'lucide-react'; // Icône pour le badge
 
-export const AboutSection = () => {
+type AboutProps = {
+  data: {
+    paragraphs: string[];
+  }
+};
+
+export const AboutSection = ({ data }: AboutProps) => {
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-24 lg:py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center gap-4 mb-12">
-          <div className="w-12 h-1 bg-blue-600"></div>
-          <h2 className="text-5xl font-bold">À PROPOS</h2>
-        </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-lg leading-relaxed text-gray-700 mb-6">
-              BASSAH DOTSE K. Marius est un consultant international spécialisé en stratégie, communication et développement. Il accompagne les dirigeants, institutions et organisations publiques et privées dans leurs projets stratégiques.
-            </p>
-            <p className="text-lg leading-relaxed text-gray-700">
-              Grâce à une approche rigoureuse et stratégique, il aide ses clients à atteindre leurs positionnements, leur influence et leur performance, aussi bien en Afrique qu'en Europe.
-            </p>
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+            
+          {/* --- Colonne Images (Collage) --- */}
+          <div className="relative">
+            {/* Image Principale */}
+            <div className="w-4/5 aspect-[3/4] bg-gray-200 rounded-3xl shadow-2xl border-8 border-white relative z-10 ml-auto">
+                {/* <Image src="..." /> */}
+            </div>
+            {/* Image Secondaire (superposée) */}
+            <div className="absolute bottom-0 left-0 w-3/5 aspect-square bg-gray-300 rounded-3xl shadow-xl border-8 border-white z-20 -mb-12 -ml-6">
+                 {/* <Image src="..." /> */}
+            </div>
+            
+            {/* Badge Flottant "Succès/Expérience" */}
+            <div className="absolute top-1/4 left-0 bg-white p-4 pr-8 rounded-r-full shadow-lg z-30 flex items-center gap-4 animate-pulse-slow">
+                <div className="bg-blue-100 p-2 rounded-full">
+                    <CheckCircle2 className="w-8 h-8 text-blue-600" />
+                </div>
+                <div>
+                    <p className="text-2xl font-bold text-gray-900">15+ Ans</p>
+                    <p className="text-sm text-gray-500 font-medium">d'Expérience</p>
+                </div>
+            </div>
           </div>
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <div className="aspect-square bg-gray-200 rounded-lg mb-4"></div>
-            <p className="text-sm text-gray-500 text-center">Photo professionnelle</p>
+
+          {/* --- Colonne Texte --- */}
+          <div>
+            <span className="text-blue-600 font-bold mb-4 block uppercase tracking-wider">À Propos de moi</span>
+            <h2 className="text-4xl lg:text-5xl font-extrabold mb-8 text-gray-900 leading-tight">
+              Je conçois des stratégies <br/> <span className="text-blue-600">qui transforment.</span>
+            </h2>
+            
+            <div className="space-y-6 text-lg text-gray-600 leading-relaxed mb-10">
+              {data.paragraphs.map((text, index) => (
+                <p key={index}>{text}</p>
+              ))}
+            </div>
+
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all">
+                Télécharger mon CV
+            </button>
           </div>
         </div>
       </div>

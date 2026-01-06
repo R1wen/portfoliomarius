@@ -1,31 +1,47 @@
 import React from 'react';
+import { Gem, Target } from 'lucide-react';
 
-export const ValuesSection = () => {
+type ValuesProps = {
+  data: {
+    valuesList: string;
+    visionText: string;
+  }
+};
+
+export const ValuesSection = ({ data }: ValuesProps) => {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center gap-4 mb-12">
-          <div className="w-12 h-1 bg-blue-600"></div>
-          <h2 className="text-5xl font-bold">VALEURS & VISION</h2>
+    <section className="py-24 lg:py-32 bg-gray-900 text-white relative overflow-hidden">
+        {/* Formes d'arrière-plan abstraites */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+             <div className="absolute top-10 right-10 w-64 h-64 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+             <div className="absolute bottom-10 left-10 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-4 text-blue-600">VALEURS</h3>
-              <p className="text-lg text-gray-700">
-                LEADERSHIP, RIGUEUR, EXCELLENCE, ENGAGEMENT, VISION STRATÉGIQUE
-              </p>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
+            
+            {/* Bloc Valeurs */}
+          <div className="bg-white/5 backdrop-blur-sm p-10 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 rotate-3">
+                <Gem className="text-white w-8 h-8" />
             </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-600">VISION</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                CONTRIBUER À LA TRANSFORMATION DURABLE DES ORGANISATIONS ET AU DÉVELOPPEMENT STRATÉGIQUE DE L'AFRIQUE ET L'EUROPE, EN PLAÇANT LE LEADERSHIP, LA STRATÉGIE ET L'INNOVATION AU CŒUR DE CHAQUE PROJET.
-              </p>
+            <h3 className="text-3xl font-bold mb-6">Nos Valeurs</h3>
+            <p className="text-lg text-gray-300 leading-relaxed font-light border-l-2 border-blue-600 pl-6">
+                {data.valuesList}
+            </p>
+          </div>
+
+            {/* Bloc Vision */}
+          <div className="bg-white/5 backdrop-blur-sm p-10 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
+             <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 -rotate-3">
+                <Target className="text-blue-900 w-8 h-8" />
             </div>
+            <h3 className="text-3xl font-bold mb-6">Notre Vision</h3>
+            <p className="text-lg text-gray-300 leading-relaxed font-light border-l-2 border-white pl-6">
+              {data.visionText}
+            </p>
           </div>
-          <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center">
-            <div className="w-full aspect-square bg-gray-200 rounded-lg"></div>
-          </div>
+
         </div>
       </div>
     </section>

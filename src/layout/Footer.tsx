@@ -18,9 +18,9 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <div className="text-sm text-gray-400">
-              <p>Email: marius@innovaskolar.fr</p>
+              <p>Email: marius.eliteschool@outlook.com</p>
               <p>Tél: +17(480)315</p>
-              <p>LinkedIn: linkedin.com/in/mabassadotse</p>
+              <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/mabassadotse</a></p>
             </div>
           </div>
         </div>

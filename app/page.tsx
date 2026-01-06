@@ -1,24 +1,32 @@
-import React from 'react';
-import Image from 'next/image';
-import { Navbar } from '@/src/layout/Navbar';
-import { Footer } from '@/src/layout/Footer';
-import { HeroSection } from '@/src/components/HeroSection';
-import { AboutSection } from '@/src/components/AboutSection';
-import { FormationSection } from '@/src/components/FormationSection';
+import {
+  HeroSection,
+  AboutSection,
+  FormationSection,
+  ExpertiseSection,
+  ExperienceSection,
+  ActivitiesSection,
+  ValuesSection,
+  ContactSection,
+} from '@/src/components';
+import { portfolioData } from "@/src/data/portfolio-data";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "BASSAH-DOTSE Marius | Portfolio",
+  description: 'Portfolio de BASSAH-DOTSE K. Marius',
+}
 
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <FormationSection />
-      {/* <ExpertiseSection />
-      <ExperienceSection />
-      <ActivitiesSection />
-      <ValuesSection />
-      <ContactSection /> */}
-      <Footer />
+      <HeroSection data={portfolioData.hero} />
+      <AboutSection data={portfolioData.about} />
+      <FormationSection items={portfolioData.formation} />
+      <ExpertiseSection items={portfolioData.expertise} />
+      <ExperienceSection items={portfolioData.experiences} />
+      <ActivitiesSection data={portfolioData.activities} />
+      <ValuesSection data={portfolioData.values} />
+      <ContactSection data={portfolioData.contact} />
     </div>
   );
 }
