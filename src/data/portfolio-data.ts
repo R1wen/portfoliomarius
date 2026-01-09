@@ -54,8 +54,8 @@ export const portfolioData = {
     { title: "Structuration de projets institutionnels et entrepreneuriaux", image: "/images/expertise/project.jpg" }
   ],
   values: {
-    valuesList: "LEADERSHIP, RIGUEUR, EXCELLENCE, ENGAGEMENT, VISION STRATÉGIQUE",
-    visionText: "CONTRIBUER À LA TRANSFORMATION DURABLE DES ORGANISATIONS ET AU DÉVELOPPEMENT STRATÉGIQUE DE L'AFRIQUE ET L'EUROPE, EN PLAÇANT LE LEADERSHIP, LA STRATÉGIE ET L'INNOVATION AU CŒUR DE CHAQUE PROJET."
+    valuesList: "Leadership, Rigueur, Excellence, Engagement, Vision stratégique",
+    visionText: "Contribuer à la transformation durable des organisations et au développement stratégique de l'Afrique et de l'Europe, en plaçant le leadership, la stratégie et l'innovation au cœur de chaque projet."
   },
   contact: {
     email: "marius.eliteschool@outlook.com",

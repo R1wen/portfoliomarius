@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   Briefcase, 
   Globe, 
@@ -19,15 +18,15 @@ export const ExperienceSection = ({ items }: ExperienceProps) => {
   const [intro, ...experiences] = items;
 
   const styles = [
-    { icon: Award, color: "text-yellow-600", bg: "bg-yellow-50", border: "border-yellow-200" },     // Management/Stratégie
-    { icon: TrendingUp, color: "text-blue-600", bg: "bg-blue-50", border: "border-blue-200" },      // Investissement
-    { icon: Building2, color: "text-indigo-600", bg: "bg-indigo-50", border: "border-indigo-200" }, // Responsable IT
-    { icon: MapPin, color: "text-red-600", bg: "bg-red-50", border: "border-red-200" },             // Mission Togo
-    { icon: Globe, color: "text-green-600", bg: "bg-green-50", border: "border-green-200" },        // Guinée
-    { icon: Users, color: "text-orange-600", bg: "bg-orange-50", border: "border-orange-200" },     // Ops Afrique
-    { icon: Briefcase, color: "text-purple-600", bg: "bg-purple-50", border: "border-purple-200" }, // Business
-    { icon: Lightbulb, color: "text-teal-600", bg: "bg-teal-50", border: "border-teal-200" },       // Fondateur
-    { icon: CheckCircle2, color: "text-slate-600", bg: "bg-slate-50", border: "border-slate-200" }, // Conseiller
+    { icon: Award, color: "text-yellow-600", bg: "bg-yellow-50", border: "border-yellow-200" },
+    { icon: TrendingUp, color: "text-blue-600", bg: "bg-blue-50", border: "border-blue-200" },
+    { icon: Building2, color: "text-indigo-600", bg: "bg-indigo-50", border: "border-indigo-200" },
+    { icon: MapPin, color: "text-red-600", bg: "bg-red-50", border: "border-red-200" },
+    { icon: Globe, color: "text-green-600", bg: "bg-green-50", border: "border-green-200" },
+    { icon: Users, color: "text-orange-600", bg: "bg-orange-50", border: "border-orange-200" },
+    { icon: Briefcase, color: "text-purple-600", bg: "bg-purple-50", border: "border-purple-200" },
+    { icon: Lightbulb, color: "text-teal-600", bg: "bg-teal-50", border: "border-teal-200" },
+    { icon: CheckCircle2, color: "text-slate-600", bg: "bg-slate-50", border: "border-slate-200" },
   ];
 
   return (
@@ -51,14 +50,31 @@ export const ExperienceSection = ({ items }: ExperienceProps) => {
               const IconComponent = style.icon;
 
               return (
-                <div key={index} className="relative flex items-center group">
-                  
-                  <div className={`absolute left-0 sm:left-6 md:left-8 lg:left-12 -translate-x-1/2 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full border-2 md:border-4 border-white shadow-md flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-110 ${style.bg}`}>
+                <div key={index} className="relative flex flex-row items-center sm:block group">
+                  <div className={`
+                    relative sm:absolute 
+                    sm:left-6 md:left-8 lg:left-12 
+                    sm:-translate-x-1/2 
+                    shrink-0 
+                    mr-4 sm:mr-0
+                    w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 
+                    rounded-full border-2 md:border-4 border-white shadow-md 
+                    flex items-center justify-center z-10 
+                    transition-transform duration-300 group-hover:scale-110 
+                    ${style.bg}
+                  `}>
                     <IconComponent className={`w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 ${style.color}`} />
                   </div>
+
+                  {/* Petit connecteur horizontal (Desktop uniquement) */}
                   <div className="hidden md:block absolute left-12 w-12 h-0.5 bg-gray-200 group-hover:bg-blue-400 transition-colors"></div>
 
-                  <div className="ml-16 sm:ml-20 md:ml-32 w-full">
+                  {/* --- CARTE DE CONTENU --- */}
+                  {/* Changement majeur ici :
+                      - Sur mobile : ml-0 (collé au flux normal après l'icone)
+                      - Sur desktop (sm+) : ml-20 (laisse la place à l'icone absolue)
+                  */}
+                  <div className="ml-0 sm:ml-20 md:ml-32 w-full">
                     <div className={`p-4 md:p-6 lg:p-8 bg-white border rounded-2xl md:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 ${style.border} group-hover:border-transparent`}>
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-4">
                         <p className="text-base md:text-lg font-bold text-gray-800 leading-snug">

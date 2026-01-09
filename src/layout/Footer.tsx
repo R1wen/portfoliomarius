@@ -19,8 +19,8 @@ export const Footer = () => {
             <h3 className="text-base md:text-lg font-bold mb-3 md:mb-4">Contact</h3>
             <div className="text-sm text-gray-400 space-y-1">
               <p className="break-all">Email: marius.eliteschool@outlook.com</p>
-              <p>Tél: +17(480)315</p>
-              <p>LinkedIn: <a href="#" target="_blank" className="hover:text-blue-400 transition-colors">linkedin.com/in/mabassadotse</a></p>
+              <p>Tél: +xxxxxxxxxx</p>
+              <p>LinkedIn: <a href="https://www.linkedin.com/in/marius-bassah-developpemntcommercialafriquesubsaharienne/" target="_blank" className="hover:text-blue-400 transition-colors">linkedin.com/in/bassahdotse</a></p>
             </div>
           </div>
         </div>
