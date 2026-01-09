@@ -1,6 +1,6 @@
 export const Navbar = () => {
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
+    <nav className="fixed top-0 w-full bg-white/95 text-black backdrop-blur-sm z-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <div className="text-xl font-bold tracking-tight">BASSAH DOTSE K.</div>

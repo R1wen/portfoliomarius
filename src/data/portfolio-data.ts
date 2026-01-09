@@ -45,13 +45,13 @@ export const portfolioData = {
     "ÉTUDES RÉALISÉES À PARIS (FRANCE), ROYAUME-UNI, DAKAR (SÉNÉGAL), ABIDJAN (CÔTE D'IVOIRE) ET STRATÉGIE"
   ],
   expertise: [
-    { title: "Stratégies de développement international" },
-    { title: "Stratégie d'entreprise" },
-    { title: "Communication stratégique et influence" },
-    { title: "Accompagnement de développement de dirigeants" },
-    { title: "Personal branding professionnel" },
-    { title: "Leadership et prise de décision" },
-    { title: "Structuration de projets institutionnels et entrepreneuriaux" }
+    { title: "Stratégies de développement international", image: "/images/expertise/expertise_strategy.png" },
+    { title: "Stratégie d'entreprise", image: "/images/expertise/strat_ent.jpg" },
+    { title: "Communication stratégique et influence", image: "/images/expertise/comm.jpg" },
+    { title: "Accompagnement de développement de dirigeants", image: "/images/expertise/expertise_leadership.png" },
+    { title: "Personal branding professionnel", image: "/images/expertise/brand.jpg" },
+    { title: "Leadership et prise de décision", image: "/images/expertise/leadership.jpg" },
+    { title: "Structuration de projets institutionnels et entrepreneuriaux", image: "/images/expertise/project.jpg" }
   ],
   values: {
     valuesList: "LEADERSHIP, RIGUEUR, EXCELLENCE, ENGAGEMENT, VISION STRATÉGIQUE",
@@ -59,7 +59,7 @@ export const portfolioData = {
   },
   contact: {
     email: "marius.eliteschool@outlook.com",
-    phone: "+17(480)315",
+    phone: "xxxxxxxxxxx",
     website: "https://eliteschool.pro",
     location: "Afrique - Europe"
   }

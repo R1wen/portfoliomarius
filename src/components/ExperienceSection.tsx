@@ -1,49 +1,79 @@
 import React from 'react';
-import { Briefcase } from 'lucide-react';
+import { 
+  Briefcase, 
+  Globe, 
+  TrendingUp, 
+  Building2, 
+  Award, 
+  Users, 
+  Lightbulb, 
+  MapPin,
+  CheckCircle2
+} from 'lucide-react';
 
 type ExperienceProps = {
   items: string[];
 };
 
 export const ExperienceSection = ({ items }: ExperienceProps) => {
-  // On sépare le premier élément qui semble être une intro
   const [intro, ...experiences] = items;
+
+  const styles = [
+    { icon: Award, color: "text-yellow-600", bg: "bg-yellow-50", border: "border-yellow-200" },     // Management/Stratégie
+    { icon: TrendingUp, color: "text-blue-600", bg: "bg-blue-50", border: "border-blue-200" },      // Investissement
+    { icon: Building2, color: "text-indigo-600", bg: "bg-indigo-50", border: "border-indigo-200" }, // Responsable IT
+    { icon: MapPin, color: "text-red-600", bg: "bg-red-50", border: "border-red-200" },             // Mission Togo
+    { icon: Globe, color: "text-green-600", bg: "bg-green-50", border: "border-green-200" },        // Guinée
+    { icon: Users, color: "text-orange-600", bg: "bg-orange-50", border: "border-orange-200" },     // Ops Afrique
+    { icon: Briefcase, color: "text-purple-600", bg: "bg-purple-50", border: "border-purple-200" }, // Business
+    { icon: Lightbulb, color: "text-teal-600", bg: "bg-teal-50", border: "border-teal-200" },       // Fondateur
+    { icon: CheckCircle2, color: "text-slate-600", bg: "bg-slate-50", border: "border-slate-200" }, // Conseiller
+  ];
 
   return (
     <section id="experience" className="py-24 lg:py-32 bg-white relative overflow-hidden">
-        {/* Forme décorative */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gray-50 rounded-full -translate-y-1/2 translate-x-1/2 -z-10"></div>
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gray-50 rounded-full -translate-y-1/2 translate-x-1/2 -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-50/50 rounded-full translate-y-1/2 -translate-x-1/4 -z-10"></div>
 
       <div className="max-w-5xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
             <span className="text-blue-600 font-bold tracking-wider uppercase">Mon Parcours</span>
             <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-2">Expériences Professionnelles</h2>
-            <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">{intro}</p>
+            <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto border-b-2 border-blue-100 pb-8">{intro}</p>
         </div>
 
-        <div className="relative space-y-8">
-            {/* Ligne verticale de la timeline */}
-            <div className="absolute left-8 top-4 bottom-4 w-0.5 bg-gray-200 hidden md:block"></div>
+        <div className="relative">
+            <div className="absolute left-8 md:left-12 top-0 bottom-0 w-0.5 bg-gray-200"></div>
 
-            {experiences.map((exp, index) => (
-              <div key={index} className="relative flex items-center group">
-                {/* Point sur la timeline */}
-                <div className="absolute left-8 -translate-x-1/2 w-4 h-4 bg-white border-4 border-blue-600 rounded-full hidden md:block z-10 group-hover:scale-125 transition-transform"></div>
-                
-                {/* La Carte */}
-                <div className="ml-0 md:ml-20 w-full p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:shadow-xl hover:border-blue-100 transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-blue-50 text-blue-600 rounded-xl shrink-0">
-                        <Briefcase size={24} />
-                    </div>
-                    <div>
-                        <p className="text-lg font-bold text-gray-800 leading-snug">{exp}</p>
-                        {/* Comme on a qu'une string, on ne peut pas séparer date/rôle, mais le design reste propre */}
+            <div className="space-y-12">
+            {experiences.map((exp, index) => {
+              const style = styles[index % styles.length];
+              const IconComponent = style.icon;
+
+              return (
+                <div key={index} className="relative flex items-center group">
+                  
+                  <div className={`absolute left-8 md:left-12 -translate-x-1/2 w-16 h-16 rounded-full border-4 border-white shadow-md flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-110 ${style.bg}`}>
+                    <IconComponent className={`w-7 h-7 ${style.color}`} />
+                  </div>
+                  <div className="hidden md:block absolute left-12 w-12 h-0.5 bg-gray-200 group-hover:bg-blue-400 transition-colors"></div>
+
+                  <div className="ml-20 md:ml-32 w-full">
+                    <div className={`p-8 bg-white border rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 ${style.border} group-hover:border-transparent`}>
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <p className="text-lg font-bold text-gray-800 leading-snug">
+                            {exp}
+                        </p>
+                        <div className={`hidden md:flex w-8 h-8 rounded-full items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity ${style.bg}`}>
+                            <div className={`w-2 h-2 rounded-full ${style.color.replace('text-', 'bg-')}`}></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
+            </div>
         </div>
       </div>
     </section>

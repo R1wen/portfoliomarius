@@ -1,4 +1,4 @@
-import React from 'react';
+import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react'; // Icône pour le badge
 
 type AboutProps = {
@@ -13,18 +13,15 @@ export const AboutSection = ({ data }: AboutProps) => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
             
-          {/* --- Colonne Images (Collage) --- */}
+          {/* --- Colonne Images --- */}
           <div className="relative">
-            {/* Image Principale */}
-            <div className="w-4/5 aspect-[3/4] bg-gray-200 rounded-3xl shadow-2xl border-8 border-white relative z-10 ml-auto">
-                {/* <Image src="..." /> */}
+            <div className="w-4/5 aspect-3/4 bg-gray-200 rounded-3xl shadow-2xl border-8 border-white relative z-10 ml-auto">
+                <Image src="/images/photos/test3.jpg" alt="Hero" fill className="object-cover rounded-3xl" />
             </div>
-            {/* Image Secondaire (superposée) */}
             <div className="absolute bottom-0 left-0 w-3/5 aspect-square bg-gray-300 rounded-3xl shadow-xl border-8 border-white z-20 -mb-12 -ml-6">
-                 {/* <Image src="..." /> */}
+                <Image src="/images/photos/test1.jpg" alt="Hero" fill className="object-cover rounded-3xl" />
             </div>
             
-            {/* Badge Flottant "Succès/Expérience" */}
             <div className="absolute top-1/4 left-0 bg-white p-4 pr-8 rounded-r-full shadow-lg z-30 flex items-center gap-4 animate-pulse-slow">
                 <div className="bg-blue-100 p-2 rounded-full">
                     <CheckCircle2 className="w-8 h-8 text-blue-600" />
