@@ -1,5 +1,5 @@
-import { PenTool, Layout, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
-import Image from 'next/image';
+import { PenTool, Layout, ArrowRight, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 type HeroProps = {
   data: {
@@ -7,122 +7,139 @@ type HeroProps = {
     role: string;
     description: string[];
     tags: string[];
-  }
+  };
 };
 
 export const HeroSection = ({ data }: HeroProps) => {
   return (
-    <section className="relative min-h-screen flex items-center bg-white overflow-hidden pt-20 pb-16 md:pt-24 md:pb-20 lg:pt-28 lg:pb-28">
-      
-      {/* --- Décoration d'arrière-plan (Cercles subtils) --- */}
-
-      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] bg-blue-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] bg-gray-50/80 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 -z-10"></div>
-      <div className="absolute top-20 md:top-40 left-4 md:left-20 w-3 h-3 md:w-4 md:h-4 bg-blue-200 rounded-full"></div>
+    <section className="relative min-h-screen flex items-center bg-slate-50 overflow-hidden pt-20 pb-12 md:pt-28 md:pb-28">
+      {/* Grid pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 w-full z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          
-          {/* ================= COLONNE GAUCHE (Texte) ================= */}
-          <div className="space-y-6 md:space-y-8 text-center lg:text-left">
-            <div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-4 md:mb-6">
-                Let's Work <br className="hidden sm:block" />
-                Together to Create <br className="hidden sm:block" />
-                <span className="text-transparent bg-clip-text bg-blue-600">Wonders with Us</span>
-              </h1>
-              
-              <div className="space-y-3 md:space-y-4 max-w-lg mx-auto lg:mx-0">
-                 {data.description.map((line, index) => (
-                    <p key={index} className="text-base md:text-lg text-gray-500 font-medium leading-relaxed">
-                      {line}
-                    </p>
-                 ))}
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Texte */}
+          <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
+            {/* Badge dispo */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm text-blue-700 text-xs font-bold uppercase tracking-wider animate-fade-in-up hover:scale-105 transition-transform cursor-default">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+              </span>
+              Disponible pour collaboration
             </div>
 
-            {/* Boutons d'action */}
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3 md:gap-4 pt-4">
-              <button className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-blue-600 text-white rounded-full font-bold text-sm md:text-base shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                Let's Talk
-              </button>
-              <button className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-white text-gray-700 border-2 border-gray-200 rounded-full font-bold text-sm md:text-base hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
-                Start Project
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-gray-900 leading-[1.05] tracking-tight">
+              Créons des <br />
+              <span className="relative inline-block text-blue-600">
+                merveilles
+                <svg
+                  className="absolute w-full h-4 -bottom-1 left-0 text-blue-200 -z-10"
+                  viewBox="0 0 100 10"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M0 5 Q 50 10 100 5"
+                    stroke="currentColor"
+                    strokeWidth="8"
+                    fill="none"
+                  />
+                </svg>
+              </span>{" "}
+              ensemble.
+            </h1>
+
+            <div className="space-y-4 max-w-xl mx-auto lg:mx-0">
+              {data.description.map((line, index) => (
+                <p
+                  key={index}
+                  className="text-lg md:text-xl text-gray-600 font-medium leading-relaxed"
+                >
+                  {line}
+                </p>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 pt-4">
+              <button className="group relative px-8 py-4 bg-gray-900 text-white rounded-full font-bold text-base shadow-xl shadow-gray-200 hover:bg-blue-600 hover:shadow-blue-200 transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden">
+                <span className="relative z-10">Let's Talk</span>
+                <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+                <div className="absolute inset-0 h-full w-full scale-0 rounded-full transition-all duration-300 group-hover:scale-100 group-hover:bg-blue-600/10"></div>
               </button>
             </div>
 
-            {/* Statistiques (Bas de colonne) */}
-            <div className="grid grid-cols-3 gap-4 md:gap-6 lg:gap-8 pt-8 md:pt-12 border-t border-gray-100 mt-6 md:mt-8">
-              <div>
-                <p className="text-2xl md:text-3xl font-extrabold text-gray-900">15+</p>
-                <p className="text-xs md:text-sm text-gray-500 font-medium mt-1">Years <br/> Experience</p>
-              </div>
-              <div>
-                <p className="text-2xl md:text-3xl font-extrabold text-gray-900">26K</p>
-                <p className="text-xs md:text-sm text-gray-500 font-medium mt-1">Projects <br/> Success</p>
-              </div>
-              <div>
-                <p className="text-2xl md:text-3xl font-extrabold text-gray-900">98%</p>
-                <p className="text-xs md:text-sm text-gray-500 font-medium mt-1">Satisfied <br/> Rate</p>
-              </div>
+            <div className="pt-6 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-sm font-semibold text-gray-400">
+              {["Strategy", "Development", "Growth"].map((tag, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-blue-500" />
+                  <span>{tag}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* ================= COLONNE DROITE (Image & Badges) ================= */}
-          <div className="relative h-full flex justify-center lg:justify-end mt-8 md:mt-12 lg:mt-0">
-            
-            {/* Conteneur de l'image (Cercle de fond subtil pour l'effet "Aura") */}
-            <div className="relative w-full max-w-full md:max-w-[400px] lg:max-w-[500px] aspect-[4/5]">
-                {/* Cercle d'aura derrière la tête */}
-                {/* <div className="absolute top-10 left-1/2 -translate-x-1/2 w-64 h-64 bg-blue-100/50 rounded-full blur-2xl -z-10"></div> */}
-                <div className="relative w-full h-full rounded-2xl md:rounded-[3rem] overflow-hidden border-4 md:border-b-8 md:border-r-8 border-gray-50 bg-gray-100">
-                    <Image 
-                        src="/images/photos/test2.jpg" 
-                        alt="Portrait" 
-                        fill 
-                        className="object-cover object-top hover:scale-105 transition-transform duration-700" 
-                    />
-                </div>
+          {/* Image & Stats */}
+          <div className="lg:col-span-5 relative mt-12 lg:mt-0">
+            <div className="relative w-full max-w-[400px] mx-auto aspect-4/5 group">
 
-                {/* --- CAPSULES FLOTTANTES (Badges) --- */}
-                
-                {/* Badge 1 - Top Right (Illustration) */}
-                <div className="hidden sm:block absolute top-8 md:top-12 right-0 md:-right-6 lg:-right-12 animate-bounce-slow z-20">
-                    <div className="bg-white p-1.5 md:p-2 pr-3 md:pr-6 rounded-full shadow-xl flex items-center gap-2 md:gap-3 border border-gray-100">
-                        <div className="w-8 h-8 md:w-10 md:h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 shrink-0">
-                            <PenTool size={14} className="md:w-[18px] md:h-[18px]" />
-                        </div>
-                        <span className="font-bold text-gray-700 text-xs md:text-sm hidden md:inline">Illustration</span>
+              <div className="relative w-full h-full rounded-[2.5rem] rounded-tr-[8rem] rounded-bl-[8rem] overflow-hidden border-4 border-white shadow-2xl z-10 bg-gray-100 transition-all duration-500 group-hover:rounded-4xl">
+                <Image
+                  src="/images/photos/test2.jpg"
+                  alt="Portrait"
+                  fill
+                  className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-gray-900/40 via-transparent to-transparent"></div>
+              </div>
+
+              {/* Stats flottantes */}
+              <div className="absolute -bottom-6 left-6 right-6 z-30">
+                <div className="bg-white/90 backdrop-blur-md border border-white/20 p-4 md:p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+                  <div className="flex justify-between items-center divide-x divide-gray-200/50">
+                    <div className="text-center px-2 flex-1">
+                      <p className="text-xl md:text-2xl font-black text-gray-900">
+                        15+
+                      </p>
+                      <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-wider">
+                        Années d'expérience
+                      </p>
                     </div>
-                </div>
-
-                {/* Badge 2 - Middle Right (Graphic Design) */}
-                <div className="hidden sm:block absolute top-1/2 right-0 md:-right-4 lg:-right-8 z-20">
-                     <div className="bg-white p-1.5 md:p-2 pr-3 md:pr-6 rounded-full shadow-xl flex items-center gap-2 md:gap-3 border border-gray-100">
-                        <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 shrink-0">
-                            <Layout size={14} className="md:w-[18px] md:h-[18px]" />
-                        </div>
-                        <span className="font-bold text-gray-700 text-xs md:text-sm hidden md:inline">Graphic Design</span>
+                    <div className="text-center px-2 flex-1">
+                      <p className="text-xl md:text-2xl font-black text-gray-900">
+                        26K
+                      </p>
+                      <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-wider">
+                        Projets réalisés
+                      </p>
                     </div>
-                </div>
-
-                {/* Badge 3 - Bottom Right (Creative Branding) */}
-                <div className="hidden sm:block absolute bottom-16 md:bottom-20 right-0 md:-right-2 lg:-right-4 animate-bounce-slow delay-700 z-20">
-                     <div className="bg-white p-1.5 md:p-2 pr-3 md:pr-6 rounded-full shadow-xl flex items-center gap-2 md:gap-3 border border-gray-100">
-                        <div className="w-8 h-8 md:w-10 md:h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 shrink-0">
-                            <Zap size={14} className="md:w-[18px] md:h-[18px]" />
-                        </div>
-                        <span className="font-bold text-gray-700 text-xs md:text-sm hidden md:inline">Creative Branding</span>
+                    <div className="text-center px-2 flex-1">
+                      <p className="text-xl md:text-2xl font-black text-gray-900">
+                        98%
+                      </p>
+                      <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-wider">
+                        Clients satisfaits
+                      </p>
                     </div>
+                  </div>
                 </div>
+              </div>
 
-                {/* Lignes de connexion décoratives (Cercles fins) - Masquées sur mobile */}
-                <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[80%] border border-blue-100 rounded-full -z-10 opacity-60"></div>
-                <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[100%] border border-dashed border-gray-200 rounded-full -z-20 opacity-40 animate-spin-slow-reverse"></div>
+              {/* Icônes flottantes */}
+              <div className="absolute top-12 -right-6 animate-bounce-slow z-20">
+                <div className="bg-gray-900 p-3 rounded-2xl shadow-xl flex items-center justify-center text-white rotate-6 hover:rotate-12 transition-transform">
+                  <PenTool size={20} />
+                </div>
+              </div>
 
+              <div className="absolute top-1/2 -left-8 -translate-y-1/2 z-20">
+                <div className="bg-blue-600 p-3 rounded-2xl shadow-xl flex items-center justify-center text-white -rotate-6 hover:-rotate-12 transition-transform">
+                  <Layout size={20} />
+                </div>
+              </div>
+              <div className="absolute -top-4 -right-4 w-full h-full rounded-[2.5rem] rounded-tr-[8rem] rounded-bl-[8rem] border-2 border-blue-600/20 -z-10"></div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

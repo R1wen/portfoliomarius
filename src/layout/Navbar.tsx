@@ -22,7 +22,6 @@ export const Navbar = () => {
             <a href="#contact" className="hover:text-blue-600 transition-colors text-sm lg:text-base">Contact</a>
           </div>
 
-          {/* Bouton Hamburger Mobile */}
           <button
             onClick={toggleMenu}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"

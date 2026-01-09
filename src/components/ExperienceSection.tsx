@@ -66,14 +66,8 @@ export const ExperienceSection = ({ items }: ExperienceProps) => {
                     <IconComponent className={`w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 ${style.color}`} />
                   </div>
 
-                  {/* Petit connecteur horizontal (Desktop uniquement) */}
                   <div className="hidden md:block absolute left-12 w-12 h-0.5 bg-gray-200 group-hover:bg-blue-400 transition-colors"></div>
 
-                  {/* --- CARTE DE CONTENU --- */}
-                  {/* Changement majeur ici :
-                      - Sur mobile : ml-0 (collé au flux normal après l'icone)
-                      - Sur desktop (sm+) : ml-20 (laisse la place à l'icone absolue)
-                  */}
                   <div className="ml-0 sm:ml-20 md:ml-32 w-full">
                     <div className={`p-4 md:p-6 lg:p-8 bg-white border rounded-2xl md:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 ${style.border} group-hover:border-transparent`}>
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-4">
