@@ -31,21 +31,21 @@ export const ExperienceSection = ({ items }: ExperienceProps) => {
   ];
 
   return (
-    <section id="experience" className="py-24 lg:py-32 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gray-50 rounded-full -translate-y-1/2 translate-x-1/2 -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-50/50 rounded-full translate-y-1/2 -translate-x-1/4 -z-10"></div>
+    <section id="experience" className="py-12 md:py-20 lg:py-32 bg-white relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] bg-gray-50 rounded-full -translate-y-1/2 translate-x-1/2 -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] bg-blue-50/50 rounded-full translate-y-1/2 -translate-x-1/4 -z-10"></div>
 
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="text-center mb-20">
-            <span className="text-blue-600 font-bold tracking-wider uppercase">Mon Parcours</span>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-2">Expériences Professionnelles</h2>
-            <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto border-b-2 border-blue-100 pb-8">{intro}</p>
+      <div className="max-w-5xl mx-auto px-4 md:px-6">
+        <div className="text-center mb-12 md:mb-16 lg:mb-20">
+            <span className="text-blue-600 font-bold tracking-wider uppercase text-sm md:text-base">Mon Parcours</span>
+            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mt-2">Expériences Professionnelles</h2>
+            <p className="mt-4 md:mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto border-b-2 border-blue-100 pb-6 md:pb-8">{intro}</p>
         </div>
 
         <div className="relative">
-            <div className="absolute left-8 md:left-12 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+            <div className="hidden sm:block absolute left-6 md:left-8 lg:left-12 top-0 bottom-0 w-0.5 bg-gray-200"></div>
 
-            <div className="space-y-12">
+            <div className="space-y-8 md:space-y-12">
             {experiences.map((exp, index) => {
               const style = styles[index % styles.length];
               const IconComponent = style.icon;
@@ -53,15 +53,15 @@ export const ExperienceSection = ({ items }: ExperienceProps) => {
               return (
                 <div key={index} className="relative flex items-center group">
                   
-                  <div className={`absolute left-8 md:left-12 -translate-x-1/2 w-16 h-16 rounded-full border-4 border-white shadow-md flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-110 ${style.bg}`}>
-                    <IconComponent className={`w-7 h-7 ${style.color}`} />
+                  <div className={`absolute left-0 sm:left-6 md:left-8 lg:left-12 -translate-x-1/2 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full border-2 md:border-4 border-white shadow-md flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-110 ${style.bg}`}>
+                    <IconComponent className={`w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 ${style.color}`} />
                   </div>
                   <div className="hidden md:block absolute left-12 w-12 h-0.5 bg-gray-200 group-hover:bg-blue-400 transition-colors"></div>
 
-                  <div className="ml-20 md:ml-32 w-full">
-                    <div className={`p-8 bg-white border rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 ${style.border} group-hover:border-transparent`}>
-                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                        <p className="text-lg font-bold text-gray-800 leading-snug">
+                  <div className="ml-16 sm:ml-20 md:ml-32 w-full">
+                    <div className={`p-4 md:p-6 lg:p-8 bg-white border rounded-2xl md:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 ${style.border} group-hover:border-transparent`}>
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-4">
+                        <p className="text-base md:text-lg font-bold text-gray-800 leading-snug">
                             {exp}
                         </p>
                         <div className={`hidden md:flex w-8 h-8 rounded-full items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity ${style.bg}`}>

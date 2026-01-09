@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <HeroSection data={portfolioData.hero} />
       <AboutSection data={portfolioData.about} />
       <FormationSection items={portfolioData.formation} />
