@@ -15,7 +15,7 @@ export const HeroSection = ({ data }: HeroProps) => {
     <section className="relative min-h-screen flex items-center bg-slate-50 overflow-hidden pt-20 pb-12 md:pt-28 md:pb-28">
       {/* Grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 -z-10"></div>
+      <div className="absolute top-0 right-0 w-150 h-150 bg-blue-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 w-full z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -81,7 +81,7 @@ export const HeroSection = ({ data }: HeroProps) => {
 
           {/* Image & Stats */}
           <div className="lg:col-span-5 relative mt-12 lg:mt-0">
-            <div className="relative w-full max-w-[400px] mx-auto aspect-4/5 group">
+            <div className="relative w-full max-w-100 mx-auto aspect-4/5 group">
 
               <div className="relative w-full h-full rounded-[2.5rem] rounded-tr-[8rem] rounded-bl-[8rem] overflow-hidden border-4 border-white shadow-2xl z-10 bg-gray-100 transition-all duration-500 group-hover:rounded-4xl">
                 <Image

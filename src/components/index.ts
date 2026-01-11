@@ -4,7 +4,7 @@ export { FormationSection } from './FormationSection';
 export { ExpertiseSection } from './ExpertiseSection';
 export { ExperienceSection } from './ExperienceSection';
 export { ActivitiesSection } from './ActivitiesSection';
-export { ValuesSection } from './BooksSection';
+export { BooksSection } from './BooksSection';
 export { ContactSection } from './ContactSection';
 export * from './AboutSection'
 export * from './ActivitiesSection'
