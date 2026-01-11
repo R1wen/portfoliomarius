@@ -5,15 +5,15 @@ import {
   ExpertiseSection,
   ExperienceSection,
   ActivitiesSection,
-  ValuesSection,
+  BooksSection,
   ContactSection,
 } from '@/src/components';
 import { portfolioData } from "@/src/data/portfolio-data";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "BASSAH-DOTSE Marius | Portfolio",
-  description: 'Portfolio de BASSAH-DOTSE K. Marius',
+  title: "Dr. BASSAH-DOTSE K. Marius | Portfolio",
+  description: 'Portfolio de Dr. BASSAH-DOTSE K. Marius',
 }
 
 export default function Portfolio() {
@@ -25,7 +25,7 @@ export default function Portfolio() {
       <ExpertiseSection items={portfolioData.expertise} />
       <ExperienceSection items={portfolioData.experiences} />
       <ActivitiesSection data={portfolioData.activities} />
-      <ValuesSection data={portfolioData.values} />
+      <BooksSection data={{ books: portfolioData.books }} />
       <ContactSection data={portfolioData.contact} />
     </div>
   );

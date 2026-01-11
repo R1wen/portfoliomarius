@@ -12,7 +12,7 @@ export const Navbar = () => {
     <nav className="fixed top-0 w-full bg-white/95 text-black backdrop-blur-sm z-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex justify-between items-center">
-          <div className="text-lg md:text-xl font-bold tracking-tight">BASSAH DOTSE K.</div>
+          <div className="text-lg md:text-xl font-bold tracking-tight">Dr. BASSAH-DOTSE K.</div>
           
           {/* Menu Desktop */}
           <div className="hidden md:flex gap-6 lg:gap-8">

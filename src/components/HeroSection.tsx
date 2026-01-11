@@ -63,14 +63,14 @@ export const HeroSection = ({ data }: HeroProps) => {
 
             <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 pt-4">
               <button className="group relative px-8 py-4 bg-gray-900 text-white rounded-full font-bold text-base shadow-xl shadow-gray-200 hover:bg-blue-600 hover:shadow-blue-200 transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden">
-                <span className="relative z-10">Let's Talk</span>
+                <a href="https://eliteschool.pro" target="_blank"><span className="relative z-10">Fondateur ELITESCHOOL</span></a>  
                 <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 h-full w-full scale-0 rounded-full transition-all duration-300 group-hover:scale-100 group-hover:bg-blue-600/10"></div>
               </button>
             </div>
 
             <div className="pt-6 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-sm font-semibold text-gray-400">
-              {["Strategy", "Development", "Growth"].map((tag, i) => (
+              {["Strategie", "Developpement", "Croissance"].map((tag, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-500" />
                   <span>{tag}</span>
@@ -85,7 +85,7 @@ export const HeroSection = ({ data }: HeroProps) => {
 
               <div className="relative w-full h-full rounded-[2.5rem] rounded-tr-[8rem] rounded-bl-[8rem] overflow-hidden border-4 border-white shadow-2xl z-10 bg-gray-100 transition-all duration-500 group-hover:rounded-4xl">
                 <Image
-                  src="/images/photos/test2.jpg"
+                  src="/images/photos/photo2.webp"
                   alt="Portrait"
                   fill
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"

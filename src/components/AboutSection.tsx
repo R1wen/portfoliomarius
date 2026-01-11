@@ -16,18 +16,18 @@ export const AboutSection = ({ data }: AboutProps) => {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
           {/* Images */}
-          <div className="relative order-2 lg:order-1 min-h-[400px] md:min-h-[500px]">
-            <div className="w-3/4 md:w-4/5 aspect-3/4 bg-gray-200 rounded-2xl md:rounded-3xl shadow-2xl border-4 md:border-8 border-white relative z-10 ml-auto max-w-[350px] md:max-w-none">
+          <div className="relative order-2 lg:order-1 min-h-100 md:min-h-125">
+            <div className="w-3/4 md:w-4/5 aspect-3/4 bg-gray-200 rounded-2xl md:rounded-3xl shadow-2xl border-4 md:border-8 border-white relative z-10 ml-auto max-w-87.5 md:max-w-none">
               <Image
-                src="/images/photos/test3.jpg"
+                src="/images/photos/photo5.webp"
                 alt="Hero"
                 fill
                 className="object-cover rounded-2xl md:rounded-3xl"
               />
             </div>
-            <div className="absolute bottom-0 left-0 w-2/3 md:w-3/5 aspect-square bg-gray-300 rounded-2xl md:rounded-3xl shadow-xl border-4 md:border-8 border-white z-20 -mb-6 md:-mb-12 -ml-3 md:-ml-6 max-w-[250px] md:max-w-none">
+            <div className="absolute bottom-0 left-0 w-2/3 md:w-3/5 aspect-square bg-gray-300 rounded-2xl md:rounded-3xl shadow-xl border-4 md:border-8 border-white z-20 -mb-6 md:-mb-12 -ml-3 md:-ml-6 max-w-62.5 md:max-w-none">
               <Image
-                src="/images/photos/test1.jpg"
+                src="/images/photos/photo3.webp"
                 alt="Hero"
                 fill
                 className="object-cover rounded-2xl md:rounded-3xl"

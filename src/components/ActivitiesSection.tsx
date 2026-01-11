@@ -28,13 +28,12 @@ export const ActivitiesSection = ({ data }: ActivitiesProps) => {
           {data.list.map((activity, index) => {
             const Icon = icons[index % icons.length];
             return (
-              <div key={index} className="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border-2 border-transparent hover:border-blue-100 hover:shadow-xl transition-all group text-center flex flex-col items-center w-full">
+              <div key={index} className="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-xl border-2 border-transparent hover:border-blue-100 hover:shadow-xl transition-all group text-center flex flex-col items-center w-full">
                 {/* Icône */}
                 <div className="w-16 h-16 md:w-20 md:h-20 bg-blue-50 rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:bg-blue-600 transition-colors">
                   <Icon className="w-8 h-8 md:w-10 md:h-10 text-blue-600 group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">{activity}</h3>
-                <p className="text-sm md:text-base text-gray-500">Accompagnement stratégique et opérationnel sur mesure.</p>
               </div>
             );
           })}

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Mail, Phone, Globe, MapPin, ArrowRight, MessageSquare, Send } from 'lucide-react';
+import { Mail, Phone, Globe, MapPin, ArrowRight } from 'lucide-react';
 
 type ContactProps = {
   data: {
