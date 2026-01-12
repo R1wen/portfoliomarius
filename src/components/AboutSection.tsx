@@ -65,9 +65,9 @@ export const AboutSection = ({ data }: AboutProps) => {
               ))}
             </div>
 
-            <a href="https://www.linkedin.com/in/marius-bassah-developpemntcommercialafriquesubsaharienne/" target="_blank">
+            <a href="/cv.pdf" download="CV_Marius_Bassah.pdf" target="_blank" rel="noopener noreferrer">
               <button className="w-full sm:w-auto bg-blue-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-sm md:text-base shadow-lg shadow-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all">
-                Mon LinkedIn
+                Télécharger son CV
               </button>
             </a>
           </div>

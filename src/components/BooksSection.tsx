@@ -44,10 +44,11 @@ export const BooksSection = ({ data }: ValuesProps) => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="relative">
-          <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-center gap-4 mb-5">
             <div className="w-12 h-1 bg-blue-600"></div>
-            <h2 className="text-4xl font-bold">MES OUVRAGES</h2>
+            <h2 className="text-4xl font-bold">SES OUVRAGES</h2>
           </div>
+          <p className="text-center text-2xl mb-5">Auteur de plusieurs livres dont…</p>
 
           <div className="relative bg-white/5 backdrop-blur-sm rounded-[3rem] border border-white/10 overflow-hidden">
             <div className="grid lg:grid-cols-2 min-h-125">

@@ -3,15 +3,15 @@ export const portfolioData = {
     name: "Dr. BASSAH-DOTSE K. Marius",
     role: "PORTFOLIO",
     description: [
-      "Marketing",
-      "Consultant international en stratégie,",
+      "Stratégie,",
+      "Marketing,",
       "Communication et développement commercial",
     ],
     tags: ["Leadership", "Vision", "Impact"]
   },
   about: {
     paragraphs: [
-      "Dr. BASSAH-DOTSE K. Marius est un consultant international spécialisé en marketing, en stratégie, communication et développement. Il accompagne les dirigeants, institutions et organisations publiques et privées dans leurs projets stratégiques.",
+      "Dr. BASSAH-DOTSE K. Marius est un consultant international spécialisé en stratégie, en marketing, communication et développement commercial. Il accompagne les dirigeants, institutions et organisations publiques et privées dans leurs projets stratégiques.",
       "Grâce à une approche rigoureuse et stratégique, il aide ses clients à atteindre leurs positionnements, leur influence et leur performance, aussi bien en Afrique qu'en Europe."
     ]
   },
@@ -46,7 +46,7 @@ export const portfolioData = {
     "LICENCE EN DROIT",
     "CERTIFICAT PROFESSIONNEL EN STRATÉGIE D'ENTREPRISE (London Business School)",
     "CERTIFICAT FRANCE COMPÉTENCES CREATION ET DEVELOPPPEMENT DE FORMATIONS",
-    "ÉTUDES RÉALISÉES À PARIS (FRANCE), ROYAUME-UNI, DAKAR (SÉNÉGAL) et LOMÉ (TOGO)"
+    "ÉTUDES RÉALISÉES À PARIS (FRANCE), ROYAUME-UNI, CANADA ET LOMÉ (TOGO)"
   ],
   expertise: [
     { title: "Stratégies de développement international", image: "/images/expertise/expertise_strategy.webp" },
